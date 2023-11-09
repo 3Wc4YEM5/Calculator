@@ -6,7 +6,7 @@ std::vector<std::string> into_RPN(const std::string& infix) { //Функция для пере
         throw "You have input empty string. Please, try again";
     }
     std::string alph = "qwertyuiopasdfghjklzxcvbnm";
-    std::vector<std::string> functions = { "sin", "cos", "tg", "ctg" };
+    std::vector<std::string> functions = { "sin", "cos", "tg", "ctg", "exp"};
     std::vector<std::string> constants = { "pi", "e", "x" };
     std::vector<std::string> minus = { "m" };
     std::vector<std::string> nums = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "." };

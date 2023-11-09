@@ -1,14 +1,14 @@
 ﻿  HomeTask1.cpp
-C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\calculate_RPN.hpp(45,41): warning C4305: аргумент: усечение из "double" в "_Ty"
+C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\HomeTask1.cpp(143,41): warning C4305: аргумент: усечение из "double" в "_Ty"
           with
           [
               _Ty=float
           ]
-C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\calculate_RPN.hpp(48,41): warning C4305: аргумент: усечение из "double" в "_Ty"
+C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\HomeTask1.cpp(146,41): warning C4305: аргумент: усечение из "double" в "_Ty"
           with
           [
               _Ty=float
           ]
-C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\calculate_RPN.hpp(18): warning C4715: math_one: значение возвращается не при всех путях выполнения
-C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\calculate_RPN.hpp(35): warning C4715: math_two: значение возвращается не при всех путях выполнения
+C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\HomeTask1.cpp(114): warning C4715: math_one: значение возвращается не при всех путях выполнения
+C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\HomeTask1.cpp(134): warning C4715: math_two: значение возвращается не при всех путях выполнения
   HomeTask1.vcxproj -> C:\Users\Georgiy\OneDrive\Рабочий стол\ЛР и ДЗ по АЯ\HomeTask1\x64\Debug\HomeTask1.exe

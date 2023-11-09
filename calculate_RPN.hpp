@@ -1,7 +1,7 @@
 #include "include.hpp"
 
 float math_one(const float& x, const std::string& operator_) {  //Функция выполняющая функцию над аргументом
-    std::map<std::string, int> ops = { {"m", 1}, {"sin", 2}, {"cos", 3}, {"tg", 4}, {"tg", 5} };
+    std::map<std::string, int> ops = { {"m", 1}, {"sin", 2}, {"cos", 3}, {"tg", 4}, {"tg", 5}, {"exp", 6}};
     int var = ops[operator_];
     switch (var) {
         case 1:
@@ -14,6 +14,8 @@ float math_one(const float& x, const std::string& operator_) {  //Функция выполн
             return tan(x);
         case 5:
             return 1/tan(x);
+        case 6:
+            return exp(x);
     }
 }
 
@@ -26,6 +28,9 @@ float math_two(const float& x, const float& y, const std::string& operator_) {  
     case 3:
         return x * y;
     case 4:
+        if (!y) {
+            throw "Division by zero. Please try again";
+        }
         return x / y;
     case 2:
         return x - y;
@@ -37,7 +42,7 @@ float math_two(const float& x, const float& y, const std::string& operator_) {  
 
 float calculate_rpn(const std::vector<std::string>& rpn, const float& x) {   //Функция подсчёта ОПЗ
     std::vector<float> operand_stack;
-    std::map<std::string, int> operators_count = { {"+", 2}, {"-", 2}, {"*", 2}, {"/", 2}, {"^", 2},  {"m", 1}, {"sin", 1}, {"cos", 1}, {"tg", 1}, {"ctg", 1} };
+    std::map<std::string, int> operators_count = { {"+", 2}, {"-", 2}, {"*", 2}, {"/", 2}, {"^", 2},  {"m", 1}, {"sin", 1}, {"cos", 1}, {"tg", 1}, {"ctg", 1}, {"exp", 1}};
     std::vector<float> temp;
     for (int i = 0; i < rpn.size(); ++i) {
         if (!operators_count.count(rpn[i])) {
@@ -55,6 +60,9 @@ float calculate_rpn(const std::vector<std::string>& rpn, const float& x) {   //Ф
             }
         }
         else {
+            if ((operators_count[rpn[i]] > operand_stack.size())) {
+                throw "There is a mistake in your expression. Perhaps you have input excessive operation or operand";
+            }
             for (int j = operators_count[rpn[i]] - 1; j > -1; --j) {
                 temp.push_back(operand_stack[operand_stack.size() - 1 - j]);
             }
